@@ -1,0 +1,95 @@
+{
+    "Algorithm Template": {
+        "prefix": "algo",
+        "body": [
+            "Algorithme ${1:nom}",
+            "",
+            "Variable",
+            "\t${2:variable}: ${3:type}",
+            "",
+            "Debut",
+            "\t${0}",
+            "Fin"
+        ],
+        "description": "Basic algorithm template"
+    },
+    "If Statement": {
+        "prefix": "si",
+        "body": [
+            "Si ${1:condition} Alors",
+            "\t${2}",
+            "FinSi"
+        ],
+        "description": "If statement"
+    },
+    "If-Else Statement": {
+        "prefix": "sisi",
+        "body": [
+            "Si ${1:condition} Alors",
+            "\t${2}",
+            "Sinon",
+            "\t${3}",
+            "FinSi"
+        ],
+        "description": "If-else statement"
+    },
+    "If-ElseIf-Else Statement": {
+        "prefix": "sisinon",
+        "body": [
+            "Si ${1:condition1} Alors",
+            "\t${2}",
+            "SinonSi ${3:condition2} Alors",
+            "\t${4}",
+            "Sinon",
+            "\t${5}",
+            "FinSi"
+        ],
+        "description": "If-elseif-else statement"
+    },
+    "For Loop": {
+        "prefix": "pour",
+        "body": [
+            "Pour ${1:i} De ${2:debut} A ${3:fin} Faire",
+            "\t${4}",
+            "FinPour"
+        ],
+        "description": "For loop"
+    },
+    "While Loop": {
+        "prefix": "tantque",
+        "body": [
+            "TantQue ${1:condition} Faire",
+            "\t${2}",
+            "FinTantQue"
+        ],
+        "description": "While loop"
+    },
+    "Switch Statement": {
+        "prefix": "selon",
+        "body": [
+            "Selon ${1:expression} Faire",
+            "\tCas ${2:valeur1}:",
+            "\t\t${3}",
+            "\tCas ${4:valeur2}:",
+            "\t\t${5}",
+            "\tSinon",
+            "\t\t${6}",
+            "FinSelon"
+        ],
+        "description": "Switch statement"
+    },
+    "Array Declaration 1D": {
+        "prefix": "tab1",
+        "body": [
+            "Tableau ${1:nom}[${2:taille}]: ${3:type}"
+        ],
+        "description": "1D array declaration"
+    },
+    "Array Declaration 2D": {
+        "prefix": "tab2",
+        "body": [
+            "Tableau ${1:nom}[${2:lignes}][${3:colonnes}]: ${4:type}"
+        ],
+        "description": "2D array declaration"
+    }
+}

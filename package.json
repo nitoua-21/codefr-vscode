@@ -1,0 +1,52 @@
+{
+  "name": "codefr",
+  "displayName": "CodeFr Language Support",
+  "description": "Language support for CodeFr - French algorithmic language",
+  "version": "0.1.0",
+  "publisher": "Normich ITOUA",
+  "author": {
+    "name": "Normich ITOUA",
+    "email": "nitoua.dev@gmail.com"
+},
+"repository": {
+  "type": "git",
+  "url": "https://github.com/nitoua-21/codefr-vscode"
+},
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "codefr",
+        "aliases": [
+          "CodeFr",
+          "codefr"
+        ],
+        "extensions": [
+          ".algo"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "codefr",
+        "scopeName": "source.codefr",
+        "path": "./syntaxes/codefr.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "codefr",
+        "path": "./snippets/snippets.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.95.0"
+  }
+}
