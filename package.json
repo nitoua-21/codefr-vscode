@@ -2,21 +2,28 @@
   "name": "codefr",
   "displayName": "CodeFr Language Support",
   "description": "Language support for CodeFr - French algorithmic language",
-  "version": "0.1.0",
-  "publisher": "Normich ITOUA",
+  "version": "0.2.0",
+  "publisher": "nitoua",
   "author": {
     "name": "Normich ITOUA",
     "email": "nitoua.dev@gmail.com"
-},
-"repository": {
-  "type": "git",
-  "url": "https://github.com/nitoua-21/codefr-vscode"
-},
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nitoua-21/codefr-vscode"
+  },
   "engines": {
     "vscode": "^1.95.0"
   },
   "categories": [
     "Programming Languages"
+  ],
+  "keywords": [
+    "codefr",
+    "algorithmic",
+    "french",
+    "education",
+    "programming"
   ],
   "contributes": {
     "languages": [
@@ -27,7 +34,7 @@
           "codefr"
         ],
         "extensions": [
-          ".algo"
+          ".cfr"
         ],
         "configuration": "./language-configuration.json"
       }
@@ -47,6 +54,7 @@
     ]
   },
   "devDependencies": {
-    "@types/vscode": "^1.95.0"
+    "@types/vscode": "^1.95.0",
+    "@vscode/vsce": "^2.24.0"
   }
 }

@@ -20,10 +20,14 @@
         ["(", ")"],
         ["\"", "\""]
     ],
+    "indentationRules": {
+        "increaseIndentPattern": "^\\s*(Si|Pour|TantQue|Selon|Fonction|Module)\\b",
+        "decreaseIndentPattern": "^\\s*(FinSi|FinPour|FinTantQue|FinSelon|FinFonction|FinModule)\\b"
+    },
     "folding": {
         "markers": {
-            "start": "^\\s*//\\s*#?region\\b",
-            "end": "^\\s*//\\s*#?endregion\\b"
+            "start": "^\\s*//\\s*#?region\\b|^\\s*(Si|Pour|TantQue|Selon|Fonction|Module)\\b",
+            "end": "^\\s*//\\s*#?endregion\\b|^\\s*(FinSi|FinPour|FinTantQue|FinSelon|FinFonction|FinModule)\\b"
         }
     }
 }

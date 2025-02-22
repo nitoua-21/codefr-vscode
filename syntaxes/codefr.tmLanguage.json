@@ -18,21 +18,24 @@
         },
         {
             "include": "#functions"
+        },
+        {
+            "include": "#modules"
         }
     ],
     "repository": {
         "keywords": {
             "patterns": [{
                 "name": "keyword.control.codefr",
-                "match": "\\b(Algorithme|Variable|Constante|Tableau|Debut|Fin|Si|Alors|SinonSi|Sinon|FinSi|TantQue|Faire|FinTantQue|Pour|De|A|FinPour|Selon|Cas|FinSelon)\\b"
+                "match": "\\b(Variables|Variable|Constante|Tableau|Debut|Fin|Si|Alors|SinonSi|Sinon|FinSi|TantQue|Faire|FinTantQue|Pour|De|A|FinPour|Selon|Cas|FinSelon|Fonction|FinFonction|Retourner|Module|FinModule|Importer)\\b"
             },
             {
                 "name": "storage.type.codefr",
-                "match": "\\b(Entier|Decimal|Chaine|Logique)\\b"
+                "match": "\\b(Entier|Decimal|Chaine|Logique|Caractere)\\b"
             },
             {
                 "name": "constant.language.codefr",
-                "match": "\\b(Vrai|Faux)\\b"
+                "match": "\\b(Vrai|Faux|Null)\\b"
             }]
         },
         "strings": {
@@ -66,13 +69,19 @@
         "operators": {
             "patterns": [{
                 "name": "keyword.operator.codefr",
-                "match": "\\b(Et|Ou|Non|Oux)\\b|\\+|\\-|\\*|\\/|\\^|\\<|\\>|\\<=|\\>=|\\==|\\!="
+                "match": "\\b(Et|Ou|Non|Oux)\\b|\\+|\\-|\\*|\\/|\\^|\\%|\\<|\\>|\\<=|\\>=|\\==|\\!=|\\="
             }]
         },
         "functions": {
             "patterns": [{
                 "name": "support.function.codefr",
-                "match": "\\b(Ecrire|Lire|Racine|Sin|Cos|Tan|Log|Log10|Arrondi|Abs|Alea|Longueur|Concatener|Comparer|Recherche)\\b"
+                "match": "\\b(Ecrire|Lire|Racine|Sin|Cos|Tan|Log|Log10|Arrondi|Abs|Alea|Exp|Puissance|Plafond|Plancher|Longueur|Concatener|Comparer|Rechercher|SousChaine|Majuscule|Minuscule|Remplacer|Inverser|Supprimer|EstNumerique|ConvertirEnNombre|ConvertirEnChaine)\\b"
+            }]
+        },
+        "modules": {
+            "patterns": [{
+                "name": "entity.name.type.module.codefr",
+                "match": "\\b(Module)\\s+([A-Za-z][A-Za-z0-9_]*)\\b"
             }]
         }
     }

@@ -1,17 +1,15 @@
 {
-    "Algorithm Template": {
+    "Template d'Algorithme": {
         "prefix": "algo",
         "body": [
-            "Algorithme ${1:nom}",
-            "",
             "Variable",
-            "\t${2:variable}: ${3:type}",
+            "${2:variable}: ${3:type}",
             "",
             "Debut",
             "\t${0}",
             "Fin"
         ],
-        "description": "Basic algorithm template"
+        "description": "Template basique d'Algo"
     },
     "If Statement": {
         "prefix": "si",
@@ -20,7 +18,7 @@
             "\t${2}",
             "FinSi"
         ],
-        "description": "If statement"
+        "description": "Instruction Si"
     },
     "If-Else Statement": {
         "prefix": "sisi",
@@ -31,7 +29,7 @@
             "\t${3}",
             "FinSi"
         ],
-        "description": "If-else statement"
+        "description": "Instruction Si-Sinon"
     },
     "If-ElseIf-Else Statement": {
         "prefix": "sisinon",
@@ -44,16 +42,16 @@
             "\t${5}",
             "FinSi"
         ],
-        "description": "If-elseif-else statement"
+        "description": "Instruction Si-SinonSi-Sinon"
     },
     "For Loop": {
         "prefix": "pour",
         "body": [
-            "Pour ${1:i} De ${2:debut} A ${3:fin} Faire",
-            "\t${4}",
+            "Pour ${1:i} De ${2:debut} A ${3:fin} Pas ${4:1} Faire",
+            "\t${5}",
             "FinPour"
         ],
-        "description": "For loop"
+        "description": "Boucle Pour"
     },
     "While Loop": {
         "prefix": "tantque",
@@ -62,7 +60,7 @@
             "\t${2}",
             "FinTantQue"
         ],
-        "description": "While loop"
+        "description": "Boucle TantQue"
     },
     "Switch Statement": {
         "prefix": "selon",
@@ -76,20 +74,67 @@
             "\t\t${6}",
             "FinSelon"
         ],
-        "description": "Switch statement"
+        "description": "Instruction Selon"
     },
     "Array Declaration 1D": {
         "prefix": "tab1",
         "body": [
             "Tableau ${1:nom}[${2:taille}]: ${3:type}"
         ],
-        "description": "1D array declaration"
+        "description": "Tableau 1D"
     },
     "Array Declaration 2D": {
         "prefix": "tab2",
         "body": [
             "Tableau ${1:nom}[${2:lignes}][${3:colonnes}]: ${4:type}"
         ],
-        "description": "2D array declaration"
+        "description": "Tableau 2D"
+    },
+    "Function": {
+        "prefix": "fonction",
+        "body": [
+            "Fonction ${1:nom}(${2:parametres}): ${3:type_retour}",
+            "Variable",
+            "\t${4:variables_locales}",
+            "Debut",
+            "\t${5}",
+            "\tRetourne ${6:valeur}",
+            "FinFonction"
+        ],
+        "description": "Fonction avec retour"
+    },
+    "Procedure": {
+        "prefix": "procedure",
+        "body": [
+            "Procedure ${1:nom}(${2:parametres})",
+            "Variable",
+            "\t${3:variables_locales}",
+            "Debut",
+            "\t${4}",
+            "FinProcedure"
+        ],
+        "description": "Procedure sans retour"
+    },
+    "Module": {
+        "prefix": "module",
+        "body": [
+            "Module ${1:nom}",
+            "",
+            "// Déclarations globales",
+            "Variable",
+            "\t${2:variables_globales}",
+            "",
+            "${3:// Fonctions et procédures du module}",
+            "",
+            "FinModule"
+        ],
+        "description": "Module"
+    },
+    "Import Module": {
+        "prefix": "importer",
+        "body": [
+            "Importer ${1:nom_module}"
+        ],
+        "description": "Importer un module"
     }
 }

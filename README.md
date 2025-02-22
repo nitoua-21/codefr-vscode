@@ -7,32 +7,56 @@ CodeFr est une extension Visual Studio Code qui fournit le support du langage Co
 
 ### 1. Coloration Syntaxique
 - Mots-clés du langage (`Algorithme`, `Variable`, `Debut`, `Fin`, etc.)
-- Types de données (`Entier`, `Decimal`, `Chaine`, `Logique`)
+- Types de données (`Entier`, `Decimal`, `Chaine`, `Caractere`, `Logique`)
 - Opérateurs (arithmétiques, logiques, comparaison)
 - Fonctions intégrées
+- Modules et importations
 - Chaînes de caractères
 - Commentaires (ligne simple et bloc)
-- Nombres
+- Nombres et constantes (`Vrai`, `Faux`, `Null`)
 
 ### 2. Snippets de Code
 Utilisez ces préfixes pour accéder rapidement aux modèles de code :
 
-| Préfixe    | Description                                   |
-|------------|-----------------------------------------------|
-| `algo`     | Modèle de base d'un algorithme                |
-| `si`       | Structure Si-Alors                            |
-| `sisi`     | Structure Si-Alors-Sinon                      |
-| `sisinon`  | Structure Si-Alors-SinonSi-Sinon             |
-| `pour`     | Boucle Pour                                   |
-| `tantque`  | Boucle TantQue                               |
-| `selon`    | Structure Selon-Cas                           |
-| `tab1`     | Déclaration de tableau 1D                     |
-| `tab2`     | Déclaration de tableau 2D                     |
+| Préfixe     | Description                                   |
+|-------------|-----------------------------------------------|
+| `algo`      | Template de base d'un algorithme              |
+| `si`        | Structure Si-Alors                            |
+| `sisi`      | Structure Si-Alors-Sinon                      |
+| `sisinon`   | Structure Si-Alors-SinonSi-Sinon             |
+| `pour`      | Boucle Pour avec pas optionnel               |
+| `tantque`   | Boucle TantQue                               |
+| `selon`     | Structure Selon-Cas                           |
+| `tab1`      | Déclaration de tableau 1D                     |
+| `tab2`      | Déclaration de tableau 2D                     |
+| `fonction`  | Fonction avec valeur de retour               |
+| `procedure` | Procédure sans retour                        |
+| `module`    | Création d'un module                         |
+| `importer`  | Importation d'un module                      |
 
-### 3. Configurations Pratiques
+### 3. Fonctions Intégrées
+#### Mathématiques
+- `Racine(x)`, `Sin(x)`, `Cos(x)`, `Tan(x)`
+- `Log(x)`, `Log10(x)`, `Exp(x)`
+- `Abs(x)`, `Arrondi(x)`, `Plafond(x)`, `Plancher(x)`
+- `Puissance(x, y)`, `Alea()`
+
+#### Chaînes de Caractères
+- `Longueur(chaine)`
+- `Concatener(chaine1, chaine2)`
+- `SousChaine(chaine, debut, longueur)`
+- `Majuscule(chaine)`, `Minuscule(chaine)`
+- `Remplacer(chaine, ancien, nouveau)`
+- `Rechercher(chaine, motif)`
+- `Inverser(chaine)`
+- `EstNumerique(chaine)`
+- `ConvertirEnNombre(chaine)`
+- `ConvertirEnChaine(valeur)`
+
+### 4. Configurations Pratiques
 - Auto-complétion des parenthèses et guillemets
-- Indentation automatique
-- Repliage de code (code folding)
+- Indentation automatique pour toutes les structures
+- Pliage de code pour toutes les structures (Si, Pour, TantQue, Fonction, Module)
 - Commentaires toggleables (Ctrl+/)
 - Correspondance des parenthèses et accolades
 
@@ -49,120 +73,27 @@ Utilisez ces préfixes pour accéder rapidement aux modèles de code :
 2. Ouvrez VS Code
 3. Appuyez sur Ctrl+Shift+P
 4. Tapez "Extensions: Install from VSIX"
-5. Sélectionnez le fichier .vsix téléchargé
 
 ## Utilisation
+1. Créez un nouveau fichier avec l'extension `.cfr`
+2. Commencez à écrire votre code en utilisant les snippets
+3. L'extension activera automatiquement la coloration syntaxique et les autres fonctionnalités
 
-### Création d'un Nouveau Fichier
-1. Créez un nouveau fichier avec l'extension `.algo`
-2. Le support du langage CodeFr s'active automatiquement
-3. Commencez à taper `algo` pour utiliser le snippet de base
-
-### Exemples de Snippets
-
-#### Modèle d'Algorithme de Base
-```
-algo⇥
-```
-Génère :
-```
-Algorithme NomAlgorithme
-
-Variable
-    variable: type
-
-Debut
-    
-Fin
-```
-
-#### Structure Conditionnelle
-```
-si⇥
-```
-Génère :
-```
-Si condition Alors
-    
-FinSi
-```
-
-#### Boucle Pour
-```
-pour⇥
-```
-Génère :
-```
-Pour i De debut A fin Faire
-    
-FinPour
-```
-
-## Raccourcis Clavier Utiles
-
-| Raccourci      | Action                                     |
-|----------------|---------------------------------------------|
-| Ctrl+/         | Commenter/décommenter la ligne              |
-| Ctrl+Space     | Afficher les suggestions                    |
-| Tab           | Accepter la suggestion/Indenter             |
-| Shift+Tab     | Désindenter                                 |
-| Ctrl+F        | Rechercher                                  |
-| Ctrl+H        | Remplacer                                   |
-
-## Configuration
-
-L'extension s'active automatiquement pour les fichiers `.algo`. Si vous souhaitez l'utiliser avec d'autres extensions de fichiers, ajoutez cette configuration dans votre `settings.json` :
-
-```json
-"files.associations": {
-    "*.algo": "codefr"
-}
-```
-
-## Problèmes Connus
-
-- La coloration syntaxique peut parfois être incorrecte dans des expressions complexes
-- L'indentation automatique peut nécessiter des ajustements manuels dans certains cas
+## Documentation
+Pour une documentation complète du langage CodeFr, consultez le fichier [codefr_description.md](codefr_description.md).
 
 ## Contribution
-
-Les contributions sont les bienvenues ! Si vous souhaitez améliorer cette extension :
-
-1. Forkez le dépôt
-2. Créez une branche pour votre fonctionnalité
-3. Committez vos changements
-4. Poussez vers la branche
-5. Ouvrez une Pull Request
-
-## Support
-
-Si vous rencontrez des problèmes ou avez des suggestions :
-- Ouvrez une issue sur GitHub
-- Envoyez un email à [nitoua.dev@gmail.com]
+Les contributions sont les bienvenues ! N'hésitez pas à :
+1. Forker le projet
+2. Créer une branche pour votre fonctionnalité
+3. Commiter vos changements
+4. Pousser vers la branche
+5. Créer une Pull Request
 
 ## Licence
+Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
 
-Cette extension est distribuée sous la licence MIT. Voir le fichier `LICENSE` pour plus de détails.
-
-## Versions
-
-### 1.0.0
-- Support initial du langage CodeFr
-- Coloration syntaxique
-- Snippets de base
-- Auto-complétion
-
-### 1.1.0
-- Ajout du support des tableaux
-- Nouveaux snippets
-- Amélioration de la coloration syntaxique
-- Correction de bugs
-
-## Auteurs
-
-- Normich ITOUA - *Travail initial*
-
-## Remerciements
-
-- L'équipe VS Code pour leur excellent éditeur
-- La communauté CodeFr pour leurs retours et suggestions
+## Contact
+- Auteur : Normich ITOUA
+- Email : nitoua.dev@gmail.com
+- GitHub : [github.com/nitoua-21/codefr-vscode](https://github.com/nitoua-21/codefr-vscode)
