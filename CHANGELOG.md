@@ -13,6 +13,8 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Pliage de code amélioré pour toutes les structures
 - Support du mot-clé 'Pas' dans les boucles Pour
 - Indentation automatique pour toutes les structures de contrôle
+- Commande d'exécution des fichiers CodeFr (F5)
+- Bouton d'exécution dans la barre d'outils
 
 ### Changed
 - Extension de fichier changée de .algo à .cfr

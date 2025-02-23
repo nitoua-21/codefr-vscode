@@ -25,6 +25,11 @@
     "education",
     "programming"
   ],
+  "activationEvents": [
+    "onLanguage:codefr",
+    "onCommand:codefr.run"
+  ],
+  "main": "./extension.js",
   "contributes": {
     "languages": [
       {
@@ -50,6 +55,37 @@
       {
         "language": "codefr",
         "path": "./snippets/snippets.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "codefr.run",
+        "title": "Exécuter le fichier CodeFr",
+        "category": "CodeFr",
+        "icon": "$(play)"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "when": "resourceLangId == codefr",
+          "command": "codefr.run",
+          "group": "navigation"
+        }
+      ],
+      "editor/context": [
+        {
+          "when": "resourceLangId == codefr",
+          "command": "codefr.run",
+          "group": "navigation"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "codefr.run",
+        "key": "f5",
+        "when": "resourceLangId == codefr && editorTextFocus"
       }
     ]
   },

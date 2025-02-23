@@ -59,6 +59,7 @@ Utilisez ces préfixes pour accéder rapidement aux modèles de code :
 - Pliage de code pour toutes les structures (Si, Pour, TantQue, Fonction, Module)
 - Commentaires toggleables (Ctrl+/)
 - Correspondance des parenthèses et accolades
+- Exécution rapide des fichiers (F5 ou bouton Play)
 
 ## Installation
 
@@ -78,6 +79,12 @@ Utilisez ces préfixes pour accéder rapidement aux modèles de code :
 1. Créez un nouveau fichier avec l'extension `.cfr`
 2. Commencez à écrire votre code en utilisant les snippets
 3. L'extension activera automatiquement la coloration syntaxique et les autres fonctionnalités
+4. Pour exécuter votre code :
+   - Appuyez sur F5
+   - Cliquez sur le bouton Play dans la barre d'outils
+   - Clic droit > Exécuter le fichier CodeFr
+   
+Note : Assurez-vous que l'interpréteur `codefr` est installé et accessible dans votre PATH.
 
 ## Documentation
 Pour une documentation complète du langage CodeFr, consultez le fichier [codefr_description.md](codefr_description.md).
